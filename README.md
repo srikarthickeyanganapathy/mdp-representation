@@ -28,7 +28,7 @@ The reward function is designed to provide feedback to the reinforcement learnin
 ##### Minimization of delays for vehicles
 
 ### Graphical Representation:
-![GR](2.png)
+![2](https://github.com/srikarthickeyanganapathy/mdp-representation/assets/119393842/cd027d52-1ceb-42e0-ad4b-7ee3cb309d27)
 
 ## PYTHON REPRESENTATION:
 ```python
@@ -48,6 +48,7 @@ P ={
 }
 ```
 ## OUTPUT:
-![Output](1.png)
+![1](https://github.com/srikarthickeyanganapathy/mdp-representation/assets/119393842/e203819d-f83b-4c3e-ad35-1c3468a3cf35)
+
 ## RESULT:
 Thus, the MDP is used to create a smart traffic management approach to reduced congestion and shorter travel times. 
