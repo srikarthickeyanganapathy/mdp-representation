@@ -1,76 +1,53 @@
 # MDP REPRESENTATION
 
 ## AIM:
-To represent Markov's Decision Process using a real time problem statement.
+The goal is to make traffic flow better. By using smart decisions for traffic lights and other actions.
+
 ## PROBLEM STATEMENT:
+
 ### Problem Description
-To develop an environment where a person has to reach his destination appropriately.
+In this traffic managing project, the goal is to optimize the flow of traffic in a given road network using Markov Decision Process (MDP) and Reinforcement Learning techniques. 
+
 ### State Space
-{0,1,2,3,4,5}
+The state space includes current traffic status at intersections, vehicle count on roads, traffic light colors, and environment factors like weather. It's like gathering puzzle pieces for making traffic smoother.
+
 ### Sample State
-3
+A sample state could include the number of vehicles waiting at each intersection, the current signal state at each intersection, and the congestion levels on different roads.
+
 ### Action Space
-1.{0} --> MOVING DOWN
-2.{1} --> MOVING LEFT
-3.{2} --> MOVING UP
-4.{3} --> MOVING RIGHT
+The action space holds choices for traffic control: changing signal colors, timing adjustments, and even redirecting vehicles.
+
 ### Sample Action
-MOVING UP
+An example of an action could be changing the traffic signals from red to green at a specific intersection, allowing traffic to flow in a certain direction.
+
 ### Reward Function
-To reach goal { +1(Reward) 
-                Otherwise ->0
+The reward function is designed to provide feedback to the reinforcement learning agent on how well it's performing.
 
+##### Smooth flow of traffic without sudden stops or traffic jams
+##### Efficient utilization of road capacity
+##### Minimization of delays for vehicles
 
-### Graphical Representation
-
-![WhatsApp Image 2023-09-12 at 12 47 28 PM](https://github.com/Archana2003-Jkumar/mdp-representation/assets/93427594/761c50f9-7ac9-4228-b520-b9ddbf5b6b80)
+### Graphical Representation:
+![GR](2.png)
 
 ## PYTHON REPRESENTATION:
-```PYTHON
-P = {
-    0 : {
-        0 : [(0.23, 0, 0.0, False)],
-        1 : [(0.52, 1, 0.0, False)],
-        2 : [(0.78, 3, 0.0, False)],
-        3 : [(0.12, 0, 0.0, False)]
+```python
+P ={
+    0: {
+        0: [(1.0, 0, 0.0, True), (0.0, 0, 0.0, True), (0.0, 0, 0.0, True)],
+        1: [(1.0, 0, 0.0, True), (0.0, 0, 0.0, True), (0.0, 0, 0.0, True)]
     },
-    1 : {
-        0 : [(0.16, 1, 0.0, False)],
-        1 : [(0.35, 2, 0.0, False)],
-        2 : [(0.58, 4, 0.0, False)],
-        3 : [(0.29, 0, 0.0, False)]
+    1: {
+        0: [(1.0, 0, 0.0, True), (0.0, 1, 0.0, False), (0.0, 2, 1.0, True)],
+        1: [(1.0, 2, 1.0, True), (0.0, 1, 0.0, False), (0.0, 0, 0.0, True)]
     },
-    2 : {
-        0 : [(0.23, 2, 0.0, False)],
-        1 : [(0.34, 2, 0.0, False)],
-        2 : [(0.78, 5, 0.0, False)],
-        3 : [(0.50, 0, 0.0, False)]
-    },
-    3 : {
-        0 : [(0.23, 0, 0.0, False)],
-        1 : [(0.45, 1, 0.0, False)],
-        2 : [(0.76, 4, 0.0, False)],
-        3 : [(0.12, 3, 0.0, False)]
-    },
-    4 : {
-        0 : [(0.23, 0, 0.0, False)],
-        1 : [(0.45, 2, 0.0, False)],
-        2 : [(0.76, 4, 0.0, False)],
-        3 : [(0.12, 3, 0.0, False)]
-    },
-   5 : {
-        0 : [(0.23, 2, 0.0, False)],
-        1 : [(0.63, 5, 0.0, False)],
-        2 : [(0.76, 3, 0.0, False)],
-        3 : [(0.76, 0, 0.0, False)]
+    2: {
+        0: [(1.0, 2, 0.0, True), (0.0, 2, 0.0, True), (0.0, 2, 0.0, True)],
+        1: [(1.0, 2, 0.0, True), (0.0, 2, 0.0, True), (0.0, 2, 0.0, True)]
     }
 }
 ```
 ## OUTPUT:
-![image](https://github.com/Archana2003-Jkumar/mdp-representation/assets/93427594/f6e8a434-0972-4b6d-8aa1-a86c7bdf637a)
-
+![Output](1.png)
 ## RESULT:
-Thus a real world problem is represented as Markov Decision Problem in the following ways successfully:
-
-Graphical Representation
-Python Representation
+Thus, the MDP is used to create a smart traffic management approach to reduced congestion and shorter travel times. 
